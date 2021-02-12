@@ -95,6 +95,7 @@ namespace External_Crosshair_Overlay
         /// <param name="keyPressed">The key that was pressed</param>
         private void KHook_KeyCombinationPressed(Key keyPressed)
         {
+            if (cb_hk.IsChecked != true) return;
             if (isAttachedToSomeProcess)
             {
                 if (keyPressed == Key.OemMinus)
