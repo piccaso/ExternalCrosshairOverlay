@@ -163,7 +163,15 @@ namespace External_Crosshair_Overlay
                 var process = allRunningProcesses[cmb_Processes.SelectedIndex];
                 if (!process.HasExited)
                 {
-                    crosshairOverlayWindow.AttachToProcess(process);
+                    try
+                    {
+                        crosshairOverlayWindow.AttachToProcess(process);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, ex.GetType().Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                        throw;
+                    }
                 }
                 else
                 {
