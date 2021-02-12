@@ -324,7 +324,7 @@ namespace External_Crosshair_Overlay
                     }
                 }
                 // sleep the thread to decrease CPU usage
-                Thread.Sleep(100);
+                Thread.Sleep(500);
             }
         }
 
